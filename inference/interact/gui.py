@@ -803,8 +803,8 @@ class App(QWidget):
         self.update_minimap()
 
     def update_gpu_usage(self):
-        info = torch.cuda.mem_get_info()
-        global_free, global_total = info
+        #info = torch.cuda.mem_get_info()
+        global_free, global_total =  8089410304,8589410304 #info
         global_free /= (2**30)
         global_total /= (2**30)
         global_used = global_total - global_free
